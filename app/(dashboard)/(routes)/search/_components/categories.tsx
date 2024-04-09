@@ -12,7 +12,8 @@ import {
   FcCalculator,
   FcBiotech,
   FcGlobe,
-  FcReading
+  FcReading,
+  FcAreaChart,
 } from "react-icons/fc";
 import { IconType } from "react-icons";
 
@@ -34,6 +35,7 @@ const iconMap: Record<Category["name"], IconType> = {
   "Science": FcBiotech, // Assuming FcTestTube represents a science-related icon
   "Social Studies": FcGlobe, // Assuming FcGlobe represents a globe icon for social studies
   "English": FcReading,
+  "Statistics": FcAreaChart,
 };
 
 export const Categories = ({
