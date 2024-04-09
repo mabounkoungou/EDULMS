@@ -57,7 +57,7 @@ export const Categories = ({
 
 
 
-  "Science"
+  
  "Social Studies"
   "English"
   "Statistics"

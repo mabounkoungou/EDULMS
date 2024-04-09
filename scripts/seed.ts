@@ -14,7 +14,12 @@ async function main() {
         { name: "Engineering" },
         { name: "Filming" },
         { name : "Science"},
-        
+        { name :  "Social Studies" },
+        { name : "English"},
+        { name : "Statistics"},
+
+
+
 
       ]
     });
