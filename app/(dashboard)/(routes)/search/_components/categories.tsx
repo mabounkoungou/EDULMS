@@ -54,3 +54,10 @@ export const Categories = ({
     </div>
   )
 }
+
+
+
+  "Science"
+ "Social Studies"
+  "English"
+  "Statistics"
