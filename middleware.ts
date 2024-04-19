@@ -1,30 +1,13 @@
 import { authMiddleware } from "@clerk/nextjs";
-import { NextRequest, NextResponse, NextFetchEvent } from "next/server";
-
- export function middleware(req: NextRequest, event: NextFetchEvent) {
-   // Create a response object for OPTIONS requests or a default response for others
-   let response = req.method === "OPTIONS" ? new NextResponse(null, {
-     status: 204,
-     headers: {
-       "Access-Control-Allow-Origin": "*", // Adjust as necessary
-       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-       "Access-Control-Allow-Headers": "Content-Type, Authorization",
-     },
-   }) : NextResponse.next();
-
-//   // Ensure CORS headers are applied to all responses, not just OPTIONS
-   if (req.method !== "OPTIONS") {
-     response.headers.set("Access-Control-Allow-Origin", "*");
-     response.headers.set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
-    response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");   }
-
-   return response;
- }
-
+ 
+// This example protects all routes including api/trpc routes
+// Please edit this to allow other routes to be public as needed.
+// See https://clerk.com/docs/references/nextjs/auth-middleware for more information about configuring your middleware
 export default authMiddleware({
-  publicRoutes: ["/sign-in", "/sign-up", "/api/webhook"],
+  publicRoutes: ["/api/webhook","/sign-in", "/sign-up","/home","/mentor", ]
 });
-
+ 
 export const config = {
-  matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
+  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
 };
+ 

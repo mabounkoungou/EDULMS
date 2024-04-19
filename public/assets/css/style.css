@@ -125,7 +125,7 @@ body { background: var(--white); }
 }
 
 .btn-primary {
-  background: var(--orange-web);
+  background: hsl(39, 100%, 50%);
   box-shadow: 5px 10px 30px hsla(39, 100%, 50%, 0.3);
 }
 
@@ -400,7 +400,7 @@ body { background: var(--white); }
 }
 
 .departments-card .card-link {
-  color: var(--orange-web);
+  color: hsl(39, 100%, 50%);
   font-family: var(--ff-rubik);
   font-weight: var(--fw-500);
   display: flex;
@@ -635,7 +635,7 @@ body { background: var(--white); }
   visibility: visible;
 }
 
-.go-top:is(:hover, :focus) { color: var(--orange-web); }
+.go-top:is(:hover, :focus) { color: hsl(39, 100%, 50%); }
 
 
 
@@ -890,7 +890,7 @@ body { background: var(--white); }
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%) scale(var(--scale));
-    background: var(--orange-web);
+    background: hsl(39, 100%, 50%);
     width: 30px;
     height: 2px;
     border-radius: 2px;
